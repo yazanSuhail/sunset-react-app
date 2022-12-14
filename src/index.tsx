@@ -8,6 +8,7 @@ const root = createRoot(rootElement!);
 
 root.render(
   <StrictMode>
-    <App />
+    {/* Add a comma between the two JSX elements */}
+    <App />,
   </StrictMode>
 );

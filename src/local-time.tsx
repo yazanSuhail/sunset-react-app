@@ -11,7 +11,7 @@ function getLocalTime(): moment.Moment & { sunset: () => Sunset } {
   const localTime = currentTime.local();
 
   // Add a sunset method to the local time object
-  localTime.sunset = () => getSunset(localTime);
+  localTime.sunSet = () => getSunset(localTime);
 
   return localTime;
 }
@@ -21,7 +21,7 @@ function getSunset(localTime: moment.Moment): Sunset {
   const sunsetTime = localTime.clone().endOf("day");
 
   // Determine the URL of the sunset image to use
-  const imageUrl = "https://www.example.com/sunset.jpg";
+  const imageUrl = "https://cdn.vectorstock.com/i/1000x1000/77/16/a-tropical-sunset-with-palm-trees-vector-28707716.webp";
 
   // Create a countdown string showing the time remaining until sunset
   const countdown = () => {
